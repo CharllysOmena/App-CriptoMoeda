@@ -3,8 +3,8 @@ Esse projeto foi desenvolvido com o intuito de demonstrar a utilização de api 
 
 ## Tela do projeto
 
-<p align="center">
-  <img width="400" src="cripto/lib/images/ezgif.com-gif-maker.gif">
+<p>
+  <img width="300" src="cripto/lib/images/ezgif.com-gif-maker.gif">
 </p>
 
 ## Principais tecnologias usadas
