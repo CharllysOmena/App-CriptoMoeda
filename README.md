@@ -14,8 +14,8 @@ Esse projeto foi desenvolvido com o intuito de demonstrar a utilização de api 
 
 ## Pacotes utilizados
 
-* http:
-* flutter_svg: ^1.1.1+1
+* [http](https://pub.dev/packages/http)
+* [flutter_svg](https://pub.dev/packages/flutter_svg)
 
 ## API utilizada
 
