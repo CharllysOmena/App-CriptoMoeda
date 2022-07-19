@@ -1,5 +1,5 @@
 # Você chegou ao aplicativo de criptomoedas
-Esse projeto foi desenvolvido com o intuito de demonstrar a utilização de api para criação de portifolio.
+Esse projeto foi desenvolvido utilizando flutter com o intuito de demonstrar a utilização de api para criação de portifolio.
 
 ## Tela do projeto
 
