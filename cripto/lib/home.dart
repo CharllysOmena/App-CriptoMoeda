@@ -3,6 +3,10 @@ import 'package:cripto/model/cripto.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
+
+import 'components/tela_error.dart';
+import 'components/tela_loading.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -36,6 +40,7 @@ class ListaFuture extends StatefulWidget {
 }
 
 class _ListaFutureState extends State<ListaFuture> {
+  NumberFormat real = NumberFormat.currency(locale: 'pt_BR', name: "R\$");
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Cripto>>(
@@ -56,6 +61,7 @@ class _ListaFutureState extends State<ListaFuture> {
             child: ListView.builder(
               itemCount: cripto.length,
               itemBuilder: ((context, index) {
+                double valor = double.parse(cripto[index].valor);
                 return Card(
                   child: ListTile(
                     leading: Container(
@@ -66,7 +72,7 @@ class _ListaFutureState extends State<ListaFuture> {
                       ),
                     ),
                     title: Text(cripto[index].nome),
-                    subtitle: Text(cripto[index].valor),
+                    subtitle: Text(real.format(valor)),
                   ),
                 );
               }),
@@ -76,51 +82,6 @@ class _ListaFutureState extends State<ListaFuture> {
           return const TelaCarregamento();
         }
       }),
-    );
-  }
-}
-
-class TelaErro extends StatelessWidget {
-  const TelaErro({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          Icon(
-            Icons.dangerous_outlined,
-            color: Colors.red,
-            size: 80,
-          ),
-          Text(
-            "Conexão de rede não encontrada!",
-            style: TextStyle(fontSize: 20),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class TelaCarregamento extends StatelessWidget {
-  const TelaCarregamento({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          CircularProgressIndicator(),
-          Text("Carregando"),
-        ],
-      ),
     );
   }
 }
