@@ -1,10 +1,10 @@
 # Você chegou ao aplicativo de criptomoedas
-Esse projeto foi desenvolvido com o intuito de demonstrar a utilização de api para criação de portifolio.
+Esse projeto foi desenvolvido utilizando flutter com o intuito de demonstrar a utilização de api para criação de portifolio.
 
 ## Tela do projeto
 
-<p align="center">
-  <img width="470" src="lib/images/ezgif.com-gif-maker.gif">
+<p>
+  <img width="300" src="cripto/lib/images/ezgif.com-gif-maker.gif">
 </p>
 
 ## Principais tecnologias usadas
