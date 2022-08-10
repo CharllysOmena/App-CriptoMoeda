@@ -10,9 +10,9 @@ List<Cripto> parseCripto(String responseBody) {
 
 Future<List<Cripto>> fetchCripto(http.Client client) async {
   final String url =
-      "https://api.nomics.com/v1/currencies/ticker?key=eb3ca72e22219c1149e4d85644685bf3c424a808&ids=BTC,ETH,XRP&convert=BR";
+      "https://api.nomics.com/v1/currencies/ticker?key=eb3ca72e22219c1149e4d85644685bf3c424a808&ids=BTC,ETH,XRP&convert=BRL";
 
   final response =
-      await client.get(Uri.parse(url)).timeout(Duration(seconds: 5));
+      await client.get(Uri.parse(url)).timeout(Duration(seconds: 10));
   return parseCripto(response.body);
 }
