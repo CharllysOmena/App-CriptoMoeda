@@ -4,7 +4,7 @@ Esse projeto foi desenvolvido utilizando flutter com o intuito de demonstrar a u
 ## Tela do projeto
 
 <p>
-  <img width="300" src="cripto/lib/images/ezgif.com-gif-maker.gif">
+  <img width="300" src="cripto/lib/images/example.gif">
 </p>
 
 ## Principais tecnologias usadas
